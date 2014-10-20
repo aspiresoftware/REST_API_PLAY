@@ -1,0 +1,14 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+OPTIONS /*path                      com.aspire.controller.SecurityController.preflight(path: String)
+
+POST    /authentication             com.aspire.controller.SecurityController.login()
+DELETE  /authentication             com.aspire.controller.SecurityController.logout()
+
+GET     /todos                      com.aspire.controller.TodoController.getAllTodos()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
